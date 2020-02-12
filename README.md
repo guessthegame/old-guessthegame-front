@@ -1,25 +1,17 @@
-# Guess the game!
+# Guess the game! [webapp]
 
-## Jouez !
+## Play!
 
 https://guess-the-game.com
 
-## Installation
+## web app
 
-### Téléchargement du projet
+This is the front-end webapp repository.
 
-- `git clone git@github.com:paulintrognon/guess-the-game.com.git`
+The back-end repository is located at https://github.com/guessthegame/guessthegame-api
 
-### Installation
+## Contribute
 
-- `yarn`
+Fell free to contribute in any way you like !
 
-### Configuration
-
-- Créez vous une base de données, et utilisez les fichiers .sql dans le dossier server/db/migrations/ pour créer votre base (lancez les dans l'ordre des dates)
-- Copiez `index.js.dist` et `server.json.dist` en `index.js` et `server.json`, et remplissez les données (un compte cloudinary et un compte mailgun sont nécéssaires)
-
-### Lancer le dev
-
-- `yarn api` pour lancer l'API
-- `yarn front` pour lancer le front
+Have fun :-)
