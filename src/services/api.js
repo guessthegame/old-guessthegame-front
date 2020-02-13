@@ -1,9 +1,9 @@
 import axios from 'axios';
-import config from 'config'; // eslint-disable-line import/no-extraneous-dependencies
+import { apiUrl } from '../config';
 import store from '../store';
 
 const api = axios.create({
-  baseURL: `${config.apiUrl}/api`,
+  baseURL: `${apiUrl}/api`,
 });
 
 export default {
