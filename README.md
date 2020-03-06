@@ -9,7 +9,7 @@ Game prod url: https://guess-the-game.com
 - Create a config/index.js file, based on config/index.example.js
 
 ```
-cp config/index.example.js config/index.js
+cp src/config/index.example.js src/config/index.js
 ```
 
 - Make sure config/index.js got the right data
