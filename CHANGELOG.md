@@ -1,3 +1,10 @@
+# v13.0.0 - Docker!
+
+- Split front and api code
+- Move front sources to new repository: guessthegame/guessthegame-front
+- Move api sources to new repository: guessthegame/guessthegame-api
+- Add Docker
+
 ### v12.2.4
 
 - Hide invitation to register on small screen (to reduce user frustration)
@@ -102,7 +109,7 @@
 - Fix images link in emails (moderation + marketing)
 - Email updates: don't send screenshots that the user has already solved
 
-# v10.0.0 - ScreenshotImage !
+# v10.0.0 - ScreenshotImage!
 
 - ScreenshotImages table added to better store Cloudinary data
 - Moderators can now edit screenshots
