@@ -1,4 +1,4 @@
-# Guess the game - api
+# Guess the game - front
 
 This repository hosts the react sources and docker-compose for the front-end
 
