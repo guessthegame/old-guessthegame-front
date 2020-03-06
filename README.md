@@ -1,14 +1,24 @@
-# Guess the game! [webapp]
+# Guess the game - api
 
-## Play!
+This repository hosts the react sources and docker-compose for the front-end
 
-https://guess-the-game.com
+Game prod url: https://guess-the-game.com
 
-## web app
+## Install
 
-This is the front-end webapp repository.
+- Create a config/index.js file, based on config/index.example.js
 
-The back-end repository is located at https://github.com/guessthegame/guessthegame-api
+```
+cp config/index.example.js config/index.js
+```
+
+- Make sure config/index.js got the right data
+
+- Build & Start the container
+
+```
+docker-compose up -d
+```
 
 ## Contribute
 

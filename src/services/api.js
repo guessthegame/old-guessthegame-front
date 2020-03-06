@@ -13,7 +13,7 @@ export default {
 };
 
 function get(url) {
-  return api.get(url).then(res => res.data.result, err => err.response.data);
+  return api.get(url).then(res => res.data.result);
 }
 
 function post(url, data, conf) {
