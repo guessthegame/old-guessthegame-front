@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import queryString from 'qs';
 import { ReCaptcha } from 'react-recaptcha-google';
-import { apiUrl } from '../../config';
+import { apiUrl, recaptchaKey } from '../../config';
 import screenshotService from '../../services/screenshotService';
 import screenshotActions from '../../store/screenshot/screenshotActions';
 import loginActions from '../../store/login/loginActions';
@@ -11,6 +11,7 @@ import Input from '../../components/Form/Input/Input';
 import Button from '../../components/Form/Button/Button';
 import SmallContainer from '../../components/SmallContainer/SmallContainer';
 import Loading from '../../components/Loading/Loading';
+
 import './EditScreenshot.css';
 
 function mapStoreToProps(store) {
@@ -424,7 +425,7 @@ class EditScreenshotPage extends React.Component {
                 }}
                 size="normal"
                 render="explicit"
-                sitekey="6LcQbmQUAAAAACyOdZhhEsUfUAO3TmUGqMMClngr"
+                sitekey={recaptchaKey}
                 onloadCallback={this.onLoadRecaptcha}
                 verifyCallback={this.onRecaptchaTokenRetrieved}
                 expiredCallback={this.onRecaptchaExpired}

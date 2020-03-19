@@ -1,3 +1,7 @@
+### v13.0.1
+
+- Move recaptcha public key inside config.js
+
 # v13.0.0 - Docker!
 
 - Split front and api code
