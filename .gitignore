@@ -11,6 +11,7 @@
 
 # config
 /src/config/index.js
+.env
 
 # uploads
 /server/uploads/*
