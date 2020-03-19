@@ -10,6 +10,7 @@ import Input from '../../../components/Form/Input/Input';
 import Button from '../../../components/Form/Button/Button';
 import loginService from '../../../services/loginService';
 import loginActions from '../../../store/login/loginActions';
+import { recaptchaKey } from '../../../config';
 import '../login.css';
 
 function mapStoreToProps(store) {
@@ -310,7 +311,7 @@ class RegisterPage extends React.Component {
           }}
           size="normal"
           render="explicit"
-          sitekey="6LcQbmQUAAAAACyOdZhhEsUfUAO3TmUGqMMClngr"
+          sitekey={recaptchaKey}
           onloadCallback={this.onLoadRecaptcha}
           verifyCallback={this.onRecaptchaTokenRetrieved}
           expiredCallback={this.onRecaptchaExpired}
