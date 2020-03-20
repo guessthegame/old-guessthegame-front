@@ -1,12 +1,26 @@
 version: '3'
 
 services:
-    front:
+    dev:
+        container_name: guessthegame-front-dev
+        image: paulintrognon/guessthegame-front-dev
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        environment:
+          - NODE_ENV=development
+        ports:
+            - ${DEV_PORT:-3000}:3000
+            - 35729:35729
+        volumes:
+          - .:/usr/src/app
+    prod:
         container_name: guessthegame-front
-        restart: always
+        image: paulintrognon/guessthegame-front
         build:
             context: .
             dockerfile: Dockerfile
-        image: guessthegame/guessthegame-front
+        environment:
+          - NODE_ENV=production
         ports:
-            - ${FRONT_PORT:-80}:80
+          - ${PORT:-80}:3000

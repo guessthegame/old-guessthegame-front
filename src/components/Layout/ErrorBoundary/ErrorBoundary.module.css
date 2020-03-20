@@ -1,0 +1,15 @@
+.main {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.reload {
+  color: blue;
+  text-decoration: underline;
+}
+
+.details {
+  text-align: 'center';
+  font-size: 8rem;
+  padding: 10rem;
+}

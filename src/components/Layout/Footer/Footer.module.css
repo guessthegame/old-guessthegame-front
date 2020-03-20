@@ -1,0 +1,25 @@
+.main {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  text-align: center;
+  border-top: 1px solid #efefef;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 640px;
+  margin: auto;
+}
+
+.content p {
+  margin: 5px 0;
+}
+
+.link {
+  text-decoration: underline;
+}

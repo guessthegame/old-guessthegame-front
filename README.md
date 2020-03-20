@@ -1,27 +1,39 @@
-# Guess the game - front
+# Plouf, plouf !
 
-This repository hosts the react sources and docker-compose for the front-end
+Site de tirage au sort en ligne avec partage du résultat.
 
-Game prod url: https://guess-the-game.com
+## Développement local
 
-## Install
 
-- Create a config/index.js file, based on config/index.example.js
+### Avec Node.js
+
+  ```shell
+ yarn
+ yarn dev
+  ```
+
+### Avec Docker
+
+```shell
+ docker-compose up dev
+  ```
+
+## Builder une image pour la prod
+
+### Avec Node.js
 
 ```
-cp src/config/index.example.js src/config/index.js
+yarn build && yarn start
 ```
 
-- Make sure config/index.js got the right data
-
-- Build & Start the container
+### Avec Docker
 
 ```
-docker-compose up -d
+docker-compose up prod
 ```
 
-## Contribute
+## Utiliser l'image officielle hub.docker.com/repository/docker/paulintrognon/plouf-plouf
 
-Fell free to contribute in any way you like !
-
-Have fun :-)
+```
+docker run -d --restart=always -p 80:3000 paulintrognon/plouf-plouf:latest
+```

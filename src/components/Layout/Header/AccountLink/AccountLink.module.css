@@ -1,0 +1,25 @@
+.main {
+  color: #FFF;
+  background-color: #87878f;
+  padding: 5px 20px;
+  border-radius: 1px;
+  font-size: 15px;
+  transition: background-color 200ms;
+}
+.main:hover, .main.active {
+  background-color: #47525E;
+}
+@media (max-width: 480px) {
+  .main {
+    padding: 5px 10px;
+  }
+}
+
+.menuIcon {
+  margin-left: 10px;
+  fill: #a0a0a7;
+  transition: fill 200ms;
+}
+.menuIcon.active {
+  fill: #47525E;
+}
