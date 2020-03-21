@@ -14,5 +14,8 @@ COPY . .
 # Building the app
 RUN yarn build
 
+ENV API_URL=${API_URL}
+ENV RECAPTCHA_KEY=${RECAPTCHA_KEY}
+
 # Running the app
 CMD [ "npm", "start" ]

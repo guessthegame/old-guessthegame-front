@@ -9,6 +9,8 @@ services:
             dockerfile: Dockerfile.dev
         environment:
           - NODE_ENV=development
+          - API_URL=${API_URL}
+          - RECAPTCHA_KEY=${RECAPTCHA_KEY}
         ports:
             - ${DEV_PORT:-3000}:3000
             - 35729:35729
@@ -22,5 +24,7 @@ services:
             dockerfile: Dockerfile
         environment:
           - NODE_ENV=production
+          - API_URL=${API_URL}
+          - RECAPTCHA_KEY=${RECAPTCHA_KEY}
         ports:
           - ${PORT:-80}:3000

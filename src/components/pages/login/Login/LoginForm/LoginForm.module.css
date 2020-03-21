@@ -1,0 +1,14 @@
+.forgotPasswordLink {
+  position: absolute;
+  right: 10px;
+  top: 28px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.error {
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}

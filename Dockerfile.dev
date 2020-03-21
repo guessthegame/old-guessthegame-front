@@ -11,5 +11,8 @@ RUN yarn
 # Coying the app
 COPY . .
 
+ENV API_URL=${API_URL}
+ENV RECAPTCHA_KEY=${RECAPTCHA_KEY}
+
 # Running the app
 CMD [ "yarn", "dev" ]

@@ -1,17 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import HeaderLink from './HeaderLink/HeaderLink'
-import AccountLink from './AccountLink/AccountLink'
+import AccountLink from './AccountLink/AccountLink.connect'
 import { useRouter } from 'next/router'
 
 import styles from './Header.module.css'
 import globalStyles from '../../styles.module.css'
 
-interface Props {
-  username?: string
-}
-
-const Header: React.FunctionComponent<Props> = ({ username }) => {
+const Header: React.FunctionComponent<{}> = () => {
   const router = useRouter()
 
   const isPathActive = (path: string): boolean => {
@@ -43,7 +39,7 @@ const Header: React.FunctionComponent<Props> = ({ username }) => {
             </HeaderLink>
           </nav>
           <div className={styles.navRight}>
-            <AccountLink username={username} active={isPathActive('/moi')} />
+            <AccountLink active={isPathActive('/moi')} />
           </div>
         </div>
       </div>

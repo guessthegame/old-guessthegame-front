@@ -1,0 +1,36 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 30px;
+  transition: background-color 200ms;
+  margin: 30px 0 20px;
+}
+.main.disabled {
+  cursor: default;
+}
+.main.light {
+  color: #47525e;
+  background-color: #FFFFFF;
+  font-weight: bold;
+}
+.main.dark {
+  color: #FFFFFF;
+  background-color: #47525e;
+  font-weight: bold;
+}
+.main.dark.disabled {
+  background-color: #A7B2Be;
+}
+
+.main svg {
+  width: 20px;
+  height: 20px;
+}
+.main.dark svg {
+  fill: currentColor;
+}
+
+

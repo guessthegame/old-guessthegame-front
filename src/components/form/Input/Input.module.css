@@ -1,0 +1,38 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+  position: relative;
+}
+
+.label {
+  margin-bottom: 5px;
+}
+
+.labelExtraText {
+  color: #888890;
+  font-size: 12px;
+}
+
+.input {
+  border: 1px solid #8492A6;
+  border-radius: 0;
+  height: 30px;
+  padding: 0 10px;
+}
+.error .input {
+  border-color: #fd464c;
+}
+.ok .input {
+  border-color: #0fcf7b;
+}
+
+.message {
+  margin-top: 5px;
+}
+.error .message {
+  color: #fd464c;
+}
+.ok .message {
+  color: #0fcf7b;
+}
