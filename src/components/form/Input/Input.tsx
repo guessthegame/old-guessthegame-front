@@ -9,7 +9,7 @@ interface Props {
   label: string
   children?: React.ReactNode
   labelExtraText?: string
-  messageType?: 'success' | 'error'
+  messageType?: 'untouched' | 'success' | 'error'
   messageTxt?: string
   value?: string
   placeholder?: string

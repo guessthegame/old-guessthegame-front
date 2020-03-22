@@ -23,7 +23,7 @@
 .error .input {
   border-color: #fd464c;
 }
-.ok .input {
+.success .input {
   border-color: #0fcf7b;
 }
 
@@ -33,6 +33,6 @@
 .error .message {
   color: #fd464c;
 }
-.ok .message {
+.success .message {
   color: #0fcf7b;
 }

@@ -1,6 +1,6 @@
 import { post, ApiResponse } from '../api'
 
-export type UserLoginErrorCodes = 'LOGIN_USER_NOT_FOUND' | 'LOGIN_INCORRECT_PASSWORD'
+export type UserLoginErrorCode = 'LOGIN_USER_NOT_FOUND' | 'LOGIN_INCORRECT_PASSWORD'
 
 export interface UserLoginRequest {
   username: string
@@ -12,7 +12,7 @@ export interface UserLoginResponse extends ApiResponse {
   username: string
   canModerateScreenshots: boolean
   error: {
-    code: UserLoginErrorCodes
+    code: UserLoginErrorCode
     message: string
   }
 }

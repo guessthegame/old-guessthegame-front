@@ -1,14 +1,13 @@
 import React from 'react'
 import LoginForm from './LoginForm/LoginForm'
 import {
-  login,
+  login as apiLogin,
   UserLoginRequest,
   UserLoginResponse,
-  UserLoginErrorCodes,
+  UserLoginErrorCode,
 } from '../../../../services/api/user/login'
 import PageSwitcher from '../../PageSwitcher/PageSwitcher'
 import SmallContainer from '../../../Layout/SmallContainer/SmallContainer'
-import Button from '../../../form/Button/Button'
 import LogoutButton from '../LogoutButton/LogoutButton.connect'
 
 interface Props {
@@ -30,21 +29,22 @@ class LoginPage extends React.Component<Props, State> {
   }
 
   handleSubmit = async (data: UserLoginRequest) => {
-    const response = await login(data)
+    const response = await apiLogin(data)
 
     // If the API returns an error
     if (response.error) {
       this.setState({
-        errorMessage: this.errorCodeToText(response.error.code),
+        errorMessage: this.errorCodeToText(response.error.code) || response.error.message,
       })
       return
     }
 
     // Else if login is successful
+    this.setState({ errorMessage: null, password: null })
     this.props.handleLogUser(response)
   }
 
-  errorCodeToText = (errorCode: UserLoginErrorCodes): string => {
+  errorCodeToText = (errorCode: UserLoginErrorCode): string => {
     switch (errorCode) {
       case 'LOGIN_USER_NOT_FOUND':
         return 'Email ou pseudo inconnu.'
@@ -61,7 +61,7 @@ class LoginPage extends React.Component<Props, State> {
       <div>
         <PageSwitcher
           links={[
-            { label: 'Inscription', href: '/inscription' },
+            { label: 'Inscription', href: '/signin' },
             { label: 'Connexion', href: '/login' },
           ]}
         />

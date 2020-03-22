@@ -48,7 +48,7 @@ class LoginForm extends React.Component<Props, State> {
     const valid = username && password
 
     return (
-      <form className="LoginPage_form" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <Input
           id="username"
           type="text"
